@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Home from "./components/Home"
+import NoTask from "./components/NoTask"
 
-function App() {
+const App = () => {
+  const [isList, setIsList] = useState(false);
+  const [name, setName] = useState(
+    () => JSON.parse(localStorage.getItem("name")) || ""
+  )
+
+  React.useEffect(() => {
+    localStorage.setItem("name", JSON.stringify(name));
+  }, [name]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      {
+        isList ?
+          <Home
+            name={name}
+          />
+          :
+          <NoTask
+            name={name}
+            setName={setName}
+            isList={isList}
+            setIsList={setIsList}
+          />
+      }
+    </>
+  )
 }
 
-export default App;
+export default App
