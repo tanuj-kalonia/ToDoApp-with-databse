@@ -1,0 +1,137 @@
+section {
+  background-color: #0f1217;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Open sans Pro";
+
+  .container {
+    background-color: #1d2b34;
+    height: 40rem;
+    width: 33rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.8rem;
+    padding: 1rem 0;
+    animation: fadeIn 1s ease-in-out;
+
+    .login-container {
+      width: 83%;
+      margin-top: 1rem;
+      //   border: 2px solid white;
+
+      .login-heading {
+        text-align: center;
+        padding: 1rem;
+
+        border-radius: 0.8rem;
+
+        h2 {
+          margin: 0;
+          font-size: 3rem;
+          color: #47de6a;
+          font-weight: 500;
+        }
+      }
+      .line {
+        border-bottom: 1px solid #5a6a74;
+        margin-top: 0.6rem;
+        width: 110%;
+        margin-left: -1.5rem;
+      }
+      .login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        margin-top: 2rem;
+
+        .input-group {
+          width: 100%;
+
+          div {
+            width: 100%;
+            input {
+              text-decoration: none;
+              width: 91%;
+              border: none;
+              background-color: #3f4555;
+              margin: 0.8rem 0;
+              height: 1rem;
+              border-radius: 0.8rem;
+              font-size: 1.5em;
+              font-weight: 300;
+              padding: 1.5rem 1rem;
+              color: white;
+              font-family: "Open sans Pro";
+
+              &::placeholder {
+                padding: 0.5rem;
+                color: white;
+                opacity: 0.7;
+                font-family: "Open sans Pro";
+              }
+              &:focus {
+                outline: none;
+                border: 2px solid #47de6a;
+              }
+            }
+          }
+        }
+      }
+    }
+    button {
+      margin-top: 2rem;
+      width: 98%;
+      padding: 0.8rem;
+      border-radius: 0.8rem;
+      font-weight: bold;
+      font-size: 2rem;
+      background-color: #47de6a;
+      border: none;
+      transition: 0.2s ease-in-out;
+      font-family: "Open sans Pro";
+      color: #1d2b34;
+      margin-bottom: 1rem;
+
+      &:hover {
+        box-shadow: 0 0 40px rgba($color: #47de6a, $alpha: 0.7);
+        cursor: pointer;
+      }
+    }
+    .trouble {
+      border-bottom: 1px solid #5a6a74;
+      margin-top: 1.5rem;
+      padding-bottom: 0.5rem;
+
+      p {
+        font-size: 1.3remrem;
+        margin: 1rem 0;
+        a {
+          text-decoration: none;
+          color: #47de6a;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+p {
+  font-size: 1.4rem;
+  span {
+    a {
+      text-decoration: none;
+      color: #47de6a;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

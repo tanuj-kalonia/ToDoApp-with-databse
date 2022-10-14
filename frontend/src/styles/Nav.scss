@@ -1,0 +1,68 @@
+::root {
+  font-family: "Source Sans Pro", sans-serif;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(63, 69, 85);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  .nav_container {
+    width: 80%;
+    padding: 0.5rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-logo,
+    .nav-link {
+      margin: 0 2rem;
+    }
+    .nav-logo {
+      a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+      }
+    }
+    .nav-link {
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        li {
+          list-style-type: none;
+          margin-left: 1rem;
+          a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            margin: 0 2 rem;
+            text-transform: uppercase;
+            transition: 0.2s all ease-in-out;
+
+            &:hover {
+              background-color: #32ca55;
+              border-radius: 0.5rem;
+            }
+          }
+          .login {
+            background-color: #32ca55;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+.active {
+  background-color: #32ca55;
+  border-radius: 0.5rem;
+}
